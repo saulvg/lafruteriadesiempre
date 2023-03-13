@@ -33,6 +33,7 @@ async function initDB(){
             CREATE TABLE products (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 name VARCHAR(100) NOT NULL,
+                photo VARCHAR(150) NOT NULL,
                 pricekg DECIMAL (5, 2) NOT NULL,
                 description VARCHAR(255) NOT NULL,
                 createdAt DATETIME NOT NULL,
@@ -46,7 +47,8 @@ async function initDB(){
         const {ADMIN_MAIL} = process.env;
 
         await connection.query(`
-            INSERT INTO user (email, password, createdAt) VALUES (
+            INSERT INTO user (id, email, password, createdAt) VALUES (
+                ${Math.floor(Math.random() * 100 +1)},
                 "${ADMIN_MAIL}",
                 "${adminPass}",
                 "${formatDate(new Date())}"

@@ -22,23 +22,42 @@ app.use(fileUpload());
 //app.use('/uploads', express.static('./static/uploads'));
 app.use('/uploads', express.static(path.join(__dirname, '/static/uploads')));
 
-
 /**
- * ###############################
- * ## Controladores de usuarios ##
- * ###############################
+ * ########################
+ * ## Custom Middlewares ##
+ * ########################
  */
+//IsAuth
+const isAuth = require('./middlewares/isAuth')
+/**
+ * ###################
+ * ## Controladores ##
+ * ###################
+ */
+//## De usuarios ##
 const {loginUser} = require('./controllers/user');
 
+//## De productos ##
+const {newProdut} = require('./controllers/products');
+
+
 /**
- * ###########################
- * ## Endopoins de usuarios ##
- * ###########################
+ * ###############
+ * ## Endopoins ##
+ * ###############
  */
+//## De usuarios ##
 
 //Logear un usuario.
-app.post('/users/login', loginUser);
+app.post('/login', loginUser);
 
+//## De productos ##
+
+//Subi un nuevo producto
+app.post('/products/new-product', isAuth, newProdut);
+
+//Obtener lista de productos
+app.get('/products/get-products', isAuth, getProducts);
 
 
 
