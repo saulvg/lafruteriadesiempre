@@ -82,7 +82,65 @@
 
 
 
+/*############
+## Products ##
+#############*/
+#products-list {
+    padding-top: 12rem;
+    display: flex;
 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#products-list li {
+    list-style: none;
+    width: min-content;
+    margin: 0 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#products-list img {
+    width: 274px;
+    height: 258px;
+    border-radius: 54px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#products-list h3 {
+    font-size: 32px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#products-list div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#products-list a {
+    text-decoration: none;
+    color: black;
+    background-color: #FFE922;
+    width: 169px;
+    height: 29px;
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+#products-list a:hover {
+    transition: 1s;
+    translate: 0.5rem -0.5rem;
+    background-color: #b9aa1c;
+}
 
 /*#############
 ## Home-Page ##

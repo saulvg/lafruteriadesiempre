@@ -24,6 +24,7 @@ import {
   HomePage,
   Products,
   LoginPage,
+  Product,
 } from './pages/index'
 
 /**
@@ -61,6 +62,7 @@ function App() {
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/productos-de-hoy' element={<Products/>}/>
+          <Route path='/producto/:idProduct' element={<Product/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>

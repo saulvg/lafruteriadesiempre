@@ -67,6 +67,19 @@ header>div {
     font-size: 0.8rem;
 }
 
+.page-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page-error div {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
 /*###########
 ## Loading ##
 ###########*/

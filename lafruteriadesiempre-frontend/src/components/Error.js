@@ -5,7 +5,7 @@ import './components.css';
 const Error = ({ children, clas }) => {
   
   return (
-      <div id='container-error'>
+      <div id='container-error' className={clas}>
         <div>❗ {children}</div>
       </div>
   );

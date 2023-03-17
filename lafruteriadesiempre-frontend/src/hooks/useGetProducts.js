@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useGetProducts = (token, setError) => {
+const useGetProducts = (setError) => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
@@ -22,7 +22,7 @@ const useGetProducts = (token, setError) => {
             }
         }
         getProducts();
-    },[token, setError]);
+    },[setError]);
 
     return {products}
 }
