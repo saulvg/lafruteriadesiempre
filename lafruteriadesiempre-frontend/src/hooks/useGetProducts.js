@@ -6,13 +6,11 @@ const useGetProducts = (token, setError) => {
     useEffect(()=>{
         const getProducts = async () =>{
             try {
-                const res = await fetch(`${process.env.REACT_APP_BACKEND}//products/get-products`,{
-                    method:'GET',
-                    headers:{
-                        Authorization:token
-                    }
+                const res = await fetch(`${process.env.REACT_APP_BACKEND}/products/get-products`,{
+                    method:'GET'
                 });
                 const body = await res.json();
+                console.log("body",body.data);
 
                 if(res.ok){
                     setProducts(body.data)
@@ -26,7 +24,7 @@ const useGetProducts = (token, setError) => {
         getProducts();
     },[token, setError]);
 
-    return products
+    return {products}
 }
 
 export default useGetProducts;

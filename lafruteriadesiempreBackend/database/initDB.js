@@ -36,6 +36,7 @@ async function initDB(){
                 photo VARCHAR(150) NOT NULL,
                 pricekg DECIMAL (5, 2) NOT NULL,
                 description VARCHAR(255) NOT NULL,
+                showw BOOLEAN DEFAULT true,
                 createdAt DATETIME NOT NULL,
                 modifiedAt DATETIME
             );

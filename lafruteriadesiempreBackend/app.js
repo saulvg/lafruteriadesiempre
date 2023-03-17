@@ -38,7 +38,7 @@ const isAuth = require('./middlewares/isAuth')
 const {loginUser} = require('./controllers/user');
 
 //## De productos ##
-const {newProdut} = require('./controllers/products');
+const {newProdut, getProducts, deleteProduct, editProduct, getAproduct} = require('./controllers/products');
 
 
 /**
@@ -57,11 +57,16 @@ app.post('/login', loginUser);
 app.post('/products/new-product', isAuth, newProdut);
 
 //Obtener lista de productos
-app.get('/products/get-products', isAuth, getProducts);
+app.get('/products/get-products', getProducts);
 
+//Obtener un producto
+app.get('/products/get-a-product/:idProduct', getAproduct);
 
+//Editar un producto
+app.put('/products/edit-product/:idProduct',isAuth ,editProduct);
 
-
+//Borrar un produto de la lista 
+app.delete('/products/delete-product/:idProduct',isAuth ,deleteProduct);
 
 
 

@@ -5,8 +5,16 @@ import './App.css';
  * ## React ##
  * ###########
  */
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import React from 'react';
 
+
+/**
+ * ###########
+ * ## Hooks ##
+ * ###########
+ */
+import { useLocalStorage } from './hooks/useSessionStorage';
 /**
  * ###########
  * ## Pages ##
@@ -14,42 +22,48 @@ import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
  */
 import {
   HomePage,
-  Products
+  Products,
+  LoginPage,
 } from './pages/index'
+
+/**
+ * ################
+ * ## Components ##
+ * ################
+ */
+import {
+  Header
+} from './components'
+
+
+//Componente para envolver a toda la aplicacion con un contexto para que este dispnible en toda la aplicacion de manera implicita el valro de token
+export const AuthContext = React.createContext();
+
+const AuthProvider = (props) => {
+  //importamos e utilizamos el customHook de 'useLocalStorage' pasandole como parametro el nombre que queramos que tenga esto qua
+  //vamos a guardar en el local storage
+  const [token, setToken] = useLocalStorage('token');
+
+  return (
+    <AuthContext.Provider value={{ token, setToken }}>
+      {props.children}
+    </AuthContext.Provider>
+  );
+};
+
 
 function App() {
   return (
-    
+    <AuthProvider>
       <BrowserRouter>
-      
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
-        <header>
-          <div>
-              <hr className='black-line'/>
-              <Link id='link-logo' to='/' style={{backgroundImage:"url(img/logo.png)"}}></Link>
-              <hr className='black-line'/>            
-          </div>
-            
-          
-        </header>
+        <Header/>
         <Routes>
+          <Route path='/login' element={<LoginPage/>}/>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/productos-de-hoy' element={<Products/>}/>
         </Routes>
       </BrowserRouter>
+    </AuthProvider>
     
   );
 }
