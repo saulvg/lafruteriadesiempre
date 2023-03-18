@@ -10,7 +10,6 @@ const useGetProducts = (setError) => {
                     method:'GET'
                 });
                 const body = await res.json();
-                console.log("body",body.data);
 
                 if(res.ok){
                     setProducts(body.data)

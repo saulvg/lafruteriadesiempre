@@ -18,7 +18,7 @@ const Header = () =>{
         <header>
           <div>
               <hr className='black-line'/>
-              <Link id='link-logo' to='/' style={{backgroundImage:"url(img/logo.png)"}}></Link>
+              <Link id='link-logo' to='/' style={{backgroundImage:'url(img/logo.png)'}}></Link>
               {token ? <span onClick={signOut}>Cerrar sesion</span> : <hr className='black-line'/>}            
           </div>
             
