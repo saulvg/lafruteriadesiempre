@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useGetProducts = (setError) => {
+const useGetProducts = (setError, toogleShoww) => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
@@ -13,6 +13,7 @@ const useGetProducts = (setError) => {
 
                 if(res.ok){
                     setProducts(body.data)
+                    /* console.log('body data',body.data); */
                 }else{
                     setError(body.message)
                 }
@@ -21,7 +22,7 @@ const useGetProducts = (setError) => {
             }
         }
         getProducts();
-    },[setError]);
+    },[setError, toogleShoww]);
 
     return {products}
 }

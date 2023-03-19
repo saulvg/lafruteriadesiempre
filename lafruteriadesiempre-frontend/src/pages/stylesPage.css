@@ -94,6 +94,30 @@
 /*#######################
 ## Product && Products ##
 ########################*/
+.showw0 img,
+.showw0 h3,
+.showw0 div {
+    opacity: 0.4;
+}
+
+#icon-show-product {
+    height: 2rem;
+    width: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    margin-left: 14rem;
+    margin-bottom: 27rem;
+
+}
+
+#icon-show-product:hover {
+    cursor: pointer;
+    background-color: rgba(70, 70, 70, 0.575);
+    transition: 0.5s;
+    border-radius: 25px;
+}
 
 .img-product {
     width: 274px;
