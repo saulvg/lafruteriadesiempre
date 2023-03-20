@@ -11,7 +11,7 @@ const HomePage = () => {
                         <h2>Productos de hoy</h2>
                     </section>
                 </Link>
-                <Link to={""}>
+                <Link to={"/haz-tu-pedido"}>
                     <section className='img-home-page' style={{backgroundImage:"url(img/hazPedido.jpg)"}}>
                         <h2>Haz tu pedido</h2>
                     </section>

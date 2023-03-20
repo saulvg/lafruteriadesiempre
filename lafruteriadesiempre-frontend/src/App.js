@@ -25,6 +25,7 @@ import {
   Products,
   LoginPage,
   Product,
+  HazTuPedido,
 } from './pages/index'
 
 /**
@@ -63,6 +64,7 @@ function App() {
           <Route path='/' element={<HomePage/>}/>
           <Route path='/productos-de-hoy' element={<Products/>}/>
           <Route path='/producto/:idProduct' element={<Product/>}/>
+          <Route path='/haz-tu-pedido' element={<HazTuPedido/>}/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>
