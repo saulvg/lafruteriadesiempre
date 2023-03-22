@@ -16,13 +16,12 @@ const Header = () =>{
 
     return(
         <header>
-          <div>
-              <hr className='black-line'/>
-              <Link id='link-logo' to='/' style={{backgroundImage:`url(/img/logo.png)`}}></Link>
-              {token ? <span onClick={signOut}>Cerrar sesion</span> : <hr className='black-line'/>}            
-          </div>
-            
-          
+            <h1 className='bye'>Fruterias huesca, Fruteria Marcelo, Fruteria Barrionuevo</h1>
+            <div>
+                <hr className='black-line'/>
+                <Link id='link-logo' to='/' style={{backgroundImage:`url(/img/logo.png)`}}></Link>
+                {token ? <span onClick={signOut}>Cerrar sesion</span> : <hr className='black-line'/>}            
+            </div>
         </header>
     )
 }

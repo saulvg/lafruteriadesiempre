@@ -9,12 +9,12 @@ const HazTuPedido = () => {
                         <figcaption>Av. de Martinez de Velasco<br/>974 xxx xxx</figcaption>
                     </figure>
                 </div>
-                <div className="haz-pedido-background">
-                    <figure>
-                        <img className="icon-haz-pedido llamanos" src="/img/llamanos.png" alt="img"/>
-                        <figcaption>Llamanos</figcaption>
-                    </figure>
-                </div>
+                
+                <figure className="haz-pedido-background">
+                    <img className="icon-haz-pedido llamanos" src="/img/llamanos.png" alt="img"/>
+                    <figcaption>Llamanos</figcaption>
+                </figure>
+                
                 <div className="haz-tu-pedido-telefono">
                     <figure>
                         <img className="icon-haz-pedido telefono" src="/img/telefono.png" alt="img"/>

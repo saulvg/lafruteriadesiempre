@@ -5,7 +5,7 @@ import './App.css';
  * ## React ##
  * ###########
  */
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
 
 
@@ -26,6 +26,7 @@ import {
   LoginPage,
   Product,
   HazTuPedido,
+  QuienesSomos,
 } from './pages/index'
 
 /**
@@ -66,6 +67,7 @@ function App() {
           <Route path='/productos-de-hoy' element={<Products/>}/>
           <Route path='/producto/:idProduct' element={<Product/>}/>
           <Route path='/haz-tu-pedido' element={<HazTuPedido/>}/>
+          <Route path='/quienes-somos' element={<QuienesSomos/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

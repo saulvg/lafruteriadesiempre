@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import './stylesPage.css'
 const HomePage = () => {
     return(
-            <main id='home-page'>
-                <section className='img-home-page' style={{backgroundImage:"url(img/quienesSomos.jpg)"}}>
+        <main id='home-page'>
+                <Link to={'/quienes-somos'} className='img-home-page' style={{backgroundImage:"url(img/quienesSomos.jpg)"}}>
                     <h2>Quienes somos</h2>
-                </section>
+                </Link>
                 <Link to={"/productos-de-hoy"}>
                     <section className='img-home-page' style={{backgroundImage:"url(img/productosHoy.jpg)"}}>
                         <h2>Productos de hoy</h2>
@@ -16,9 +16,7 @@ const HomePage = () => {
                         <h2>Haz tu pedido</h2>
                     </section>
                 </Link>
-                
-                
-            </main>
+          </main>
     );
 } 
 export default HomePage;

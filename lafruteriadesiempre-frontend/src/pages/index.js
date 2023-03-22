@@ -3,6 +3,7 @@ import LoginPage from "./LoginPage";
 import Products from "./Products";
 import Product from "./Product";
 import HazTuPedido from "./HazTuPedido";
+import QuienesSomos from "./QuinesSomos";
 
 
 export {
@@ -11,4 +12,5 @@ export {
     LoginPage,
     Product,
     HazTuPedido,
+    QuienesSomos
 }
