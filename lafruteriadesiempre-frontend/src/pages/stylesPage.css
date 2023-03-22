@@ -394,11 +394,11 @@
 #quienes-somos {
     display: flex;
     justify-content: center;
+    padding-bottom: 2rem;
 }
 
 #content-quienes-somos {
     width: 80%;
-    background-color: aqua;
 
     display: flex;
     flex-direction: column;
@@ -429,6 +429,31 @@
     width: 80%;
     border: 0.1px solid black;
 }
+
+#quienes-somos #timetable {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#quienes-somos #timetable>div {
+    margin: 1rem;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+}
+
+#quienes-somos #timetable>div p {
+    margin: 1rem 0;
+}
+
+
+#quienes-somos #timetable>div span {
+    padding-left: 1rem;
+}
+
 
 
 
