@@ -148,3 +148,11 @@ header>div {
         transform: rotate(360deg);
     }
 }
+
+/*##########
+## Footer ##
+##########*/
+#footer{
+    background-color: pink;
+    margin-top: auto;
+}

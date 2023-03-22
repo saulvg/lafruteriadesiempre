@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import useGetProduct from "../hooks/useGetProduct";
 import { Error } from '../components';
 import { AuthContext } from '../App';
-import ProductAdmin from '../components/ProductAdmin';
+import {ProductAdmin} from '../components';
 
 
 

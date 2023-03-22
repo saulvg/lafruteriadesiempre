@@ -34,6 +34,7 @@ import {
  * ################
  */
 import {
+  Footer,
   Header
 } from './components'
 
@@ -66,6 +67,7 @@ function App() {
           <Route path='/producto/:idProduct' element={<Product/>}/>
           <Route path='/haz-tu-pedido' element={<HazTuPedido/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </AuthProvider>
     
