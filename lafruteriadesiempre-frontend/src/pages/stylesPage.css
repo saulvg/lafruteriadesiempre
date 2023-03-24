@@ -398,28 +398,59 @@
 }
 
 #content-quienes-somos {
-    width: 80%;
-
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    gap: 2rem;
+    /* gap: 2rem; */
+    gap: 3rem;
     font-size: 32px;
     text-align: center;
+}
+
+#quienes-somos #content-quienes-somos figcaption {
+    margin: 1rem 0;
 }
 
 
 #quienes-somos .fruit-store {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
 }
 
+
+
 #quienes-somos .fruit-store img {
-    width: 603px;
-    height: 349px;
+    width: 338px;
+    height: 212px;
     object-fit: cover;
+}
+
+#quienes-somos .fruit-store .telf-ubi {
+    margin-bottom: 2rem;
+}
+
+#quienes-somos .fruit-store .telf-ubi figure {
+    font-size: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+
+#quienes-somos .fruit-store .telf-ubi img {
+    object-fit: contain;
+    width: 86px;
+    height: 57px;
+}
+
+#quienes-somos .fruit-store .telf-ubi figure:nth-child(2) img {
+    width: 76px;
+    height: 51px;
 }
 
 #quienes-somos .separator {
@@ -430,16 +461,29 @@
     border: 0.1px solid black;
 }
 
+#quienes-somos .separator.desktop {
+    display: none;
+}
+
+#quienes-somos #map {
+    display: none;
+}
+
+#quienes-somos .special-p {
+    margin: 5rem 0 10rem;
+}
+
 #quienes-somos #timetable {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 }
 
 #quienes-somos #timetable>div {
     margin: 1rem;
     font-size: 30px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 4rem;
     align-items: center;
@@ -452,6 +496,7 @@
 
 #quienes-somos #timetable>div span {
     padding-left: 1rem;
+    display: none;
 }
 
 
@@ -540,6 +585,38 @@
     }
 
 
+    /*#################
+    ## Quienes somos ##
+    ##################*/
+    #quienes-somos .fruit-store>figure img {
+        width: 603px;
+        height: 349px;
+        object-fit: cover;
+    }
+
+    #quienes-somos .fruit-store .telf-ubi {
+        display: none;
+    }
+
+    #quienes-somos .separator.movile {
+        display: none;
+    }
+
+    #quienes-somos .separator.desktop {
+        display: inline-block;
+    }
+
+    #quienes-somos #timetable {
+        text-align: left;
+    }
+
+    #quienes-somos #map {
+        display: inline-block;
+    }
+
+    #quienes-somos #timetable>div span {
+        display: inline-block;
+    }
 }
 
 @media (min-width: 1024px) {}

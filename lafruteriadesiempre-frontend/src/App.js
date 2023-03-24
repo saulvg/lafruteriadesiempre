@@ -27,6 +27,8 @@ import {
   Product,
   HazTuPedido,
   QuienesSomos,
+  PoliticasPrivacidad,
+  AvisoLegal
 } from './pages/index'
 
 /**
@@ -68,6 +70,8 @@ function App() {
           <Route path='/producto/:idProduct' element={<Product/>}/>
           <Route path='/haz-tu-pedido' element={<HazTuPedido/>}/>
           <Route path='/quienes-somos' element={<QuienesSomos/>}/>
+          <Route path='/politicas-de-privacidad' element={<PoliticasPrivacidad/>}  />
+          <Route path='/aviso-legal' element={<AvisoLegal/>}  />
         </Routes>
         <Footer/>
       </BrowserRouter>

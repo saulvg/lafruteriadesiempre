@@ -7,7 +7,7 @@ export default class Maps extends Component{
         return(
             <div className="container">
                 <GoogleMaps
-                    apiKey={`${process.env.KEY_MAP}`}
+                    apiKey='AIzaSyDEsFftld0ypwtDTLt9yGqOdyNeZhxB6jY'
                     style={{height:"269px", width:"55vw"}}
                     zoom={15}
                     center={{

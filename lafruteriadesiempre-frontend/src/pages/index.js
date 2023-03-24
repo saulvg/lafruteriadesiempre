@@ -4,6 +4,9 @@ import Products from "./Products";
 import Product from "./Product";
 import HazTuPedido from "./HazTuPedido";
 import QuienesSomos from "./QuinesSomos";
+import PoliticasPrivacidad from './PoliticasPrivacidad';
+import AvisoLegal from '../pages/AvisoLegal';
+
 
 
 export {
@@ -12,5 +15,7 @@ export {
     LoginPage,
     Product,
     HazTuPedido,
-    QuienesSomos
+    QuienesSomos,
+    PoliticasPrivacidad,
+    AvisoLegal
 }
