@@ -8,7 +8,6 @@ const Footer = () => {
                 <p>
                     <Link to={'/politicas-de-privacidad'} target='_blank'>Politicas de privacidad</Link>
                 </p>
-                {/* <p>Terminos y condiciones</p> */}
                 <p>
                     <Link to={'aviso-legal'} target='_blank'>Aviso legal</Link>
                 </p>

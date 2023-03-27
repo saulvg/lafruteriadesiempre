@@ -500,6 +500,38 @@
 }
 
 
+/*###############
+## Aviso legal ##
+###############*/
+.aviso-politicas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.aviso-politicas div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 70%;
+
+}
+
+.aviso-politicas h3 {
+    font-size: 30px;
+}
+
+.aviso-politicas h4 {
+    font-style: oblique;
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+}
+
+.aviso-politicas ul {
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
 
 
 
@@ -618,5 +650,3 @@
         display: inline-block;
     }
 }
-
-@media (min-width: 1024px) {}

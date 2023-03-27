@@ -152,7 +152,89 @@ header>div {
 /*##########
 ## Footer ##
 ##########*/
-#footer{
-    background-color: pink;
+#footer {
     margin-top: auto;
+    min-height: 2rem;
+    border: 1px solid black;
+}
+
+#footer div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    margin: 1rem;
+}
+
+#footer div a {
+    color: black
+}
+
+/*########
+## List ##
+########*/
+
+#list {
+    height: 3rem;
+    width: 3rem;
+    background-color: #f7e0d3;
+    border-radius: 10px;
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+}
+
+#list:hover {
+    cursor: pointer;
+    height: 3.5rem;
+    width: 3.5rem;
+    transition: 0.4s;
+    transform: scale(.95);
+}
+
+#list img {
+    width: 100%;
+}
+
+#container-modal-list {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: RGB(0, 0, 0, 43%);
+}
+
+#modal-list {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    padding: 2rem;
+
+}
+
+#modal-list div {
+    text-align: end;
+    padding-right: 1rem;
+
+}
+
+#modal-list div:hover {
+    cursor: pointer;
+}
+
+#modal-list span {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0.3rem;
+}
+
+#modal-list li {
+    list-style: none;
 }

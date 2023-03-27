@@ -38,7 +38,8 @@ import {
  */
 import {
   Footer,
-  Header
+  Header,
+  List
 } from './components'
 
 
@@ -73,6 +74,7 @@ function App() {
           <Route path='/politicas-de-privacidad' element={<PoliticasPrivacidad/>}  />
           <Route path='/aviso-legal' element={<AvisoLegal/>}  />
         </Routes>
+        <List/>
         <Footer/>
       </BrowserRouter>
     </AuthProvider>
