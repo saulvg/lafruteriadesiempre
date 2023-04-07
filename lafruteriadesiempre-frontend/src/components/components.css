@@ -213,16 +213,18 @@ header>div {
     position: absolute;
     right: 0;
     top: 0;
-    width: 30%;
+    width: 80%;
     height: 100vh;
     padding: 2rem;
+
+    overflow-y: scroll;
 
 }
 
 #modal-list div {
     text-align: end;
-    padding-right: 1rem;
-
+    /*     padding-right: 1rem;
+ */
 }
 
 #modal-list div:hover {
@@ -237,4 +239,39 @@ header>div {
 
 #modal-list li {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+#modal-list li>div {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-list li img {
+    width: 103px;
+    height: 102px;
+    border-radius: 54px;
+}
+
+@media (min-width: 1000px) {
+
+    /*########
+    ## List ##
+    ########*/
+    #modal-list {
+        width: 30%;
+
+    }
+
+    #modal-list li {
+        flex-direction: row;
+    }
 }

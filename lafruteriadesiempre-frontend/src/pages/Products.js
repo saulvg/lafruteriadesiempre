@@ -12,14 +12,13 @@ const Products = ()=> {
     const {products} = useGetProducts(setError);
     const productShoww = products.filter((product)=>product.showw===1);
 
-    const [list, setList] = useState(window.localStorage.getItem('list'))
-
+    
     const array = [];
     const setLocalStorage = (value) => {
         try {
-            array.push(value);
-            setList(array)
-            window.localStorage.setItem('list', list);
+            array.push(value)
+            localStorage.setItem('list', JSON.stringify(array));
+            
         } catch (error) {
             console.error(error);
         }
@@ -59,12 +58,11 @@ const Products = ()=> {
                                     <div>
                                         <Link className='yellow-button' to={`/producto/${product.id}`}>Saber mas</Link>
                                         <span className='yellow-button' onClick={()=>setLocalStorage({id:product.id, name:product.name, img:`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`})}>Añadir a la lista</span>
-                                    </div>
+   
+                                     </div>
                                 </li>
                             )
                         })}
-                           {/* <button onClick={()=>{ console.log(window.localStorage.getItem('list'))}}>Click</button> */}
-                           {console.log(list)}
 
                     </>
                 }
