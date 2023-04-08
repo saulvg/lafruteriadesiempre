@@ -261,17 +261,41 @@ header>div {
     border-radius: 54px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 760px) {
 
     /*########
     ## List ##
     ########*/
     #modal-list {
-        width: 30%;
+        width: 50%;
 
     }
 
     #modal-list li {
         flex-direction: row;
     }
+}
+
+@media (min-width: 1000px) {
+
+    /*########
+    ## List ##
+    ########*/
+    #modal-list {
+        width: 40%;
+
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    /*########
+    ## List ##
+    ########*/
+    #modal-list {
+        width: 25%;
+
+    }
+
 }

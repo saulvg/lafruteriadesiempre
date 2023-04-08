@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useList from "../hooks/useList";
 
 
 const List = () => {
-    const [modal, setModal] = useState(false)
-    const list = JSON.parse(localStorage.getItem('list'));
+    const [modal, setModal] = useState(false);
     
    
-
+    
     return(
         <>
         {!modal ? 
@@ -21,7 +21,7 @@ const List = () => {
                     </div>
                     
                     <ul>
-                        {list.map((product)=>{
+                        {/* {x.map((product)=>{
                             return(
                                 <li key={product.id} className={'list'}>
                                     <img src={`${product.img}`} alt='img'/>
@@ -31,7 +31,8 @@ const List = () => {
                                     </div>
                                 </li>
                             )
-                        })}    
+                        })}   */}
+                        
                     </ul>
                     
                 </div>

@@ -52,7 +52,7 @@ const AuthProvider = (props) => {
   const [token, setToken] = useLocalStorage('token');
 
   return (
-    <AuthContext.Provider value={{ token, setToken }}>
+    <AuthContext.Provider value={{ token, setToken}}>
       {props.children}
     </AuthContext.Provider>
   );
