@@ -8,19 +8,28 @@ import {ProductAdmin} from '../components';
 
 
 
-const Product = ()=>{
+const Product = ({allProducts, setAllProducts, quantity, setQuantity})=>{
     const {token} = useContext(AuthContext);
 
     const {idProduct} = useParams();
     const [error, setError] = useState('');
     const {name, setName, description, setDescription, pricekg, setPricekg, showw, setShoww, photo, setUpdate} = useGetProduct(idProduct, setError);
     
+    const onAddProduct = (product) => {
+        if(!(allProducts.find(item => item.id === product.id))){
+            setAllProducts([...allProducts, product]);
+            setQuantity(quantity+1)
+        }
+    }
 
     
     return(
         <>
         {!error ? 
             <>
+            <span>
+                <img src="./img/atras.png" alt="img"/>
+            </span>
             {token ? 
                 <ProductAdmin token={token} idProduct={idProduct} name={name} setName={setName} pricekg={pricekg} setPricekg={setPricekg} description={description} setDescription={setDescription} showw={showw} setShoww={setShoww} photo={photo} setError={setError} setUpdate={setUpdate}/>
                 :
@@ -29,7 +38,7 @@ const Product = ()=>{
                     <figure>
                         <div id='product-content'>
                             <img className="img-product" src={`${process.env.REACT_APP_BACKEND}/uploads/${photo}`} alt='img'/>
-                            <span className="yellow-button">Añadir a la lista</span>
+                            <span className="yellow-button" onClick={()=>onAddProduct({id:idProduct, name:name, photo:photo})}>Añadir a la lista</span>
                         </div>
                         <div id='product-info'>
                             <h3 className="name-product">{name}</h3>

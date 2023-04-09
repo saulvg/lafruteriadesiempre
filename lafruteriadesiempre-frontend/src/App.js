@@ -6,7 +6,7 @@ import './App.css';
  * ###########
  */
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 
 
 /**
@@ -60,6 +60,10 @@ const AuthProvider = (props) => {
 
 
 function App() {
+
+  const [allProducts, setAllProducts] = useState([]);
+  const [quantity, setQuantity] = useState(0)
+
   return (
     <AuthProvider>
       <BrowserRouter>
@@ -67,14 +71,14 @@ function App() {
         <Routes>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path='/' element={<HomePage/>}/>
-          <Route path='/productos-de-hoy' element={<Products/>}/>
-          <Route path='/producto/:idProduct' element={<Product/>}/>
+          <Route path='/productos-de-hoy' element={<Products allProducts={allProducts} setAllProducts={setAllProducts} quantity={quantity} setQuantity={setQuantity}/>}/>
+          <Route path='/producto/:idProduct' element={<Product allProducts={allProducts} setAllProducts={setAllProducts} quantity={quantity} setQuantity={setQuantity}/>}/>
           <Route path='/haz-tu-pedido' element={<HazTuPedido/>}/>
           <Route path='/quienes-somos' element={<QuienesSomos/>}/>
           <Route path='/politicas-de-privacidad' element={<PoliticasPrivacidad/>}  />
           <Route path='/aviso-legal' element={<AvisoLegal/>}  />
         </Routes>
-        <List/>
+        <List allProducts={allProducts} setAllProducts={setAllProducts} quantity={quantity} setQuantity={setQuantity}/>
         <Footer/>
       </BrowserRouter>
     </AuthProvider>

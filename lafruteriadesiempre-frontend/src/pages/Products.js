@@ -4,22 +4,19 @@ import useGetProducts from "../hooks/useGetProducts";
 import {Error} from "../components"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../App';
-import useList from '../hooks/useList';
 
 
-const Products = ()=> {    
+const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {    
     const {token} = useContext(AuthContext);
     const [error, setError] = useState('');
     const {products} = useGetProducts(setError);
     const productShoww = products.filter((product)=>product.showw===1);
-
-    const [list, setList] = useState([localStorage.getItem('list')]);
-    const changeList = (p) => {
-        list.push(p);
-        console.log('LIST',list);
-        
-        localStorage.setItem('list', JSON.stringify(list));
-
+ 
+    const onAddProduct = (product) => {
+        if(!(allProducts.find(item => item.id === product.id))){
+            setAllProducts([...allProducts, product]);
+            setQuantity(quantity+1)
+        }
     }
    
     return(
@@ -54,9 +51,7 @@ const Products = ()=> {
                                     <h3 className="name-product">{product.name}</h3>
                                     <div>
                                         <Link className='yellow-button' to={`/producto/${product.id}`}>Saber mas</Link>
-                                        <span className='yellow-button' onClick={()=>changeList({id:product.id, name:product.name, img:`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`})}>Añadir a la lista</span>
-                                        {/* <span className='yellow-button' onClick={()=>setLocalStorage({id:product.id, name:product.name, img:`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`})}>Añadir a la lista</span> */}
-   
+                                        <span className='yellow-button' onClick={()=>onAddProduct(product)}>Añadir a la lista</span>   
                                      </div>
                                 </li>
                             )

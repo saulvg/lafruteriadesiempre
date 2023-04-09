@@ -152,6 +152,7 @@
     transition: 1s;
     translate: 0.5rem -0.5rem;
     background-color: #b9aa1c;
+    cursor: pointer;
 }
 
 #products-list {
