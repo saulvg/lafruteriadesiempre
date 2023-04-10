@@ -7,7 +7,7 @@ const newProdut = async (req, res, next) => {
     try {
         connection = await getDB();
 
-        const {name, pricekg, description} = req.body;
+        const {name, pricekg, description, showw} = req.body;
 
         if(!(name || pricekg || description)){
             const error = new Error('Faltan campos');
@@ -18,19 +18,19 @@ const newProdut = async (req, res, next) => {
         const photo = req.files?.photo;
         let productPhoto;
         if(!photo) {
-            const error = new Error('Faltan campos');
+            const error = new Error('Faltan camposs');
             error.httpStatus = 400;
             throw error;
         }else{
             productPhoto = await savePhoto(photo);
         }
 
-        const [products] = await connection.query(
+        /* const [products] =  */await connection.query(
             `INSERT INTO products
-                (name, photo, pricekg, description, createdAt)
+                (name, photo, pricekg, description, showw, createdAt)
             VALUES
-                (?, ?, ?, ?, ?)`,
-            [name, productPhoto, pricekg, description, new Date()]
+                (?, ?, ?, ?, ?, ?)`,
+            [name, productPhoto, pricekg, description, showw, new Date()]
         );
 
         res.send({
