@@ -80,6 +80,40 @@ header>div {
     text-align: center;
 }
 
+/*################
+## ProductAdmin ##
+################*/
+#edit-product {
+    display: flex;
+    margin: 0 4rem 2rem;
+    padding: 2rem;
+    flex-direction: column;
+    gap: 4rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#edit-product label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+#edit-product label input,
+#edit-product label select,
+#edit-product label option,
+#edit-product label textarea {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#edit-product label span {
+    width: 8rem;
+    text-align: start;
+    margin-right: 1rem;
+}
+
 /*###########
 ## Loading ##
 ###########*/
@@ -185,6 +219,8 @@ header>div {
     right: 2rem;
     bottom: 4rem;
 }
+
+
 
 #list:hover {
     cursor: pointer;

@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+//import AOS from 'aos';
+/* import 'aos/dist/aos.css'; */
 /**
  * ###########
  * ## React ##
  * ###########
  */
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 
 
 /**
@@ -27,6 +29,7 @@ import {
   Product,
   HazTuPedido,
   QuienesSomos,
+  NewProduct,
   PoliticasPrivacidad,
   AvisoLegal
 } from './pages/index'
@@ -61,8 +64,15 @@ const AuthProvider = (props) => {
 
 function App() {
 
+ /*  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+ */
   const [allProducts, setAllProducts] = useState([]);
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(0);
+  //const {token} = useContext(AuthContext);
+
 
   return (
     <AuthProvider>
@@ -77,6 +87,7 @@ function App() {
           <Route path='/quienes-somos' element={<QuienesSomos/>}/>
           <Route path='/politicas-de-privacidad' element={<PoliticasPrivacidad/>}  />
           <Route path='/aviso-legal' element={<AvisoLegal/>}  />
+          <Route path='/nuevo-producto' element={<NewProduct/>}/> 
         </Routes>
         <List allProducts={allProducts} setAllProducts={setAllProducts} quantity={quantity} setQuantity={setQuantity}/>
         <Footer/>

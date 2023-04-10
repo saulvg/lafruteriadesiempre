@@ -230,6 +230,23 @@
     margin-top: 0.5rem;
 }
 
+#back-plus img {
+    background-color: #f7e0d3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 3rem;
+    position: fixed;
+    bottom: 9rem;
+    right: 2rem;
+}
+
+#back-arrow img {
+    width: 3rem;
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+}
+
 /*################
 ## Haz tu Pedido ##
 #################*/
@@ -533,6 +550,17 @@
     margin: 1rem 0;
 }
 
+
+/*###############
+## New-Product ##
+################*/
+#new-product {
+    flex-direction: column;
+}
+
+#new-product #edit-product input {
+    width: 11rem;
+}
 
 
 

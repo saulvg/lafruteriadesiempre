@@ -65,7 +65,7 @@ const PoliticasPrivacidad = () =>{
                 <section>
                     <h4>Ejercicio de derechos</h4>
                     <p>
-                        Cualquier persona tiene derecho a obtener confirmación sobre si en Frutosca, S.L. se están tratando sus datos personales.
+                        Cualquier persona tiene derecho a obtener confirmación sobre si en fruteria Barrionuevo o fruteria Marcelo, se están tratando sus datos personales.
                         Las personas interesadas tienen derecho a:
                     </p>
                     <ul>

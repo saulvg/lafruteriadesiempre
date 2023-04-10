@@ -6,6 +6,7 @@ import HazTuPedido from "./HazTuPedido";
 import QuienesSomos from "./QuinesSomos";
 import PoliticasPrivacidad from './PoliticasPrivacidad';
 import AvisoLegal from '../pages/AvisoLegal';
+import NewProduct from "./NewProduct";
 
 
 
@@ -16,6 +17,7 @@ export {
     Product,
     HazTuPedido,
     QuienesSomos,
+    NewProduct,
     PoliticasPrivacidad,
     AvisoLegal
 }

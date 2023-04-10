@@ -26,6 +26,9 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
                     
                 {token ? 
                     <>  
+                    <Link to={'/nuevo-producto'} id='back-plus'>
+                        <img src="../img/anadir.png" alt="img"/>
+                    </Link>
                         {products.map((product)=>{
 
                             return(
@@ -35,7 +38,6 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
                                     <h3 className="name-product">{product.name}</h3>
                                     <div>
                                         <Link className='yellow-button' to={`/producto/${product.id}`}>Saber mas</Link>
-                                        <span className='yellow-button'>Añadir a la lista</span>
                                     </div>
                                 </li>
                             )

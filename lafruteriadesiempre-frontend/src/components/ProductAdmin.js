@@ -52,46 +52,49 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
                 </section>
 
 
-                    <form onSubmit={saveChanges}>
-                        <label>
-                            Nombre:
-                            <input 
-                                type={'text'}
-                                value={name}
-                                onChange={(e)=>setName(e.target.value)}
-                            />
-                        </label>
-                        <label>
-                            Descripcion:
-                            <textarea 
-                                type={'text'}
-                                value={description}
-                                onChange={(e)=>setDescription(e.target.value)}
-                            />
-                        </label>
-                        <label>
-                            Precio aprox €/Kg
-                            <input 
-                                type={'text'}
-                                value={pricekg}
-                                onChange={(e)=>setPricekg(e.target.value)}
-                            /> 
+                <form onSubmit={saveChanges} id="edit-product">
+                    <label>
+                        <span>Nombre:</span>
+                        <input 
+                            type={'text'}
+                            value={name}
+                            onChange={(e)=>setName(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                        <span>Descripcion:</span>
+                        <textarea 
+                            type={'text'}
+                            cols={'40'}
+                            rows={'4'} 
+                            value={description}
+                            onChange={(e)=>setDescription(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                    <span>Precio aprox €/Kg</span>
+                        <input 
+                            type={'text'}
+                            value={pricekg}
+                            onChange={(e)=>setPricekg(e.target.value)}
+                        /> 
 
-                        </label>   
-                        <label>
-                            Visible {showw ? 'Si' : 'No'}
-                            <select 
-                            defaultValue={'selecciona'}
-                            onChange={(e)=>setShoww(e.target.value)}>   
-                                <option value='selecciona'>Elige</option>
-                                <option value='1'>Si</option>
-                                <option value='0'>No</option>
+                    </label>   
+                    <label>
+                        <span>Visible {showw ? 'Si' : 'No'}</span>
+                        <select 
+                        defaultValue={'selecciona'}
+                        onChange={(e)=>setShoww(e.target.value)}>   
+                            <option value='selecciona'>Elige</option>
+                            <option value='1'>Si</option>
+                            <option value='0'>No</option>
 
-                            </select>
-                        </label>
-                            
+                        </select>
+                    </label>
+                    <div>
                         <button>Actualizar</button>
-                    </form>
+                    </div> 
+                </form>
                 </>
     )
 }

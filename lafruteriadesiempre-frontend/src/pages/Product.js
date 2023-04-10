@@ -1,10 +1,11 @@
 import './stylesPage.css'
 import { useContext, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useGetProduct from "../hooks/useGetProduct";
 import { Error } from '../components';
 import { AuthContext } from '../App';
 import {ProductAdmin} from '../components';
+
 
 
 
@@ -27,9 +28,10 @@ const Product = ({allProducts, setAllProducts, quantity, setQuantity})=>{
         <>
         {!error ? 
             <>
-            <span>
-                <img src="./img/atras.png" alt="img"/>
-            </span>
+            <Link to={'/productos-de-hoy'} id='back-arrow'>
+                <img src="../img/atras.png" alt="img"/>
+            </Link>
+        
             {token ? 
                 <ProductAdmin token={token} idProduct={idProduct} name={name} setName={setName} pricekg={pricekg} setPricekg={setPricekg} description={description} setDescription={setDescription} showw={showw} setShoww={setShoww} photo={photo} setError={setError} setUpdate={setUpdate}/>
                 :
