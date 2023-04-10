@@ -80,6 +80,11 @@ header>div {
     text-align: center;
 }
 
+.standard-page.error {
+    flex-direction: column;
+    padding: 30%;
+}
+
 /*################
 ## ProductAdmin ##
 ################*/
