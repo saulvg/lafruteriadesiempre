@@ -27,7 +27,7 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
                 {token ? 
                     <>  
                     <Link to={'/nuevo-producto'} id='back-plus'>
-                        <img src="../img/anadir.png" alt="img"/>
+                        <img src="../img/anadir.png" alt="icon anadir porducto"/>
                     </Link>
                         {products.map((product)=>{
 

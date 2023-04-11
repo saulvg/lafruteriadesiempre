@@ -1,5 +1,13 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Loading from "./Loading";
+
+
 const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, description, setDescription, showw, setShoww, photo, setError, setUpdate}) => {
     
+    const [delProduct, setDelProduct] = useState('')
+    const navigate = useNavigate();
+
     const saveChanges = (e) => {
         e.preventDefault();
         setUpdate('')
@@ -21,7 +29,7 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
                 const body = await res.json()
                 
                 if (res.ok){
-                    setUpdate(body.message)
+                    setDelProduct(body.message)
                 }else{
                     setError(body.message)
                 }
@@ -33,13 +41,41 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
         save();
     }
 
+    const deleteProduct = async () => {
+
+        const redirect = () => navigate('/productos-de-hoy')
+
+            try {
+                const res = await fetch(`${process.env.REACT_APP_BACKEND}/products/delete-product/${idProduct}`,{
+                    method:'DELETE',
+                    headers:{
+                        Authorization: token, 
+                        
+                    }                
+                })
+                const body = await res.json();
+                if(res.ok){
+                    setDelProduct(body.message);
+                    setTimeout(redirect, 3000);
+                }else{
+                    setError(body.message);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        
+        
+    }
+
     return(
         <>
+            {!delProduct ?
+                <>
                 <section id='individual-product' className='standard-page'>
                     <figure>
                         <div id='product-content'>
                             <img className="img-product" src={`${process.env.REACT_APP_BACKEND}/uploads/${photo}`} alt='img'/>
-                            <span className="yellow-button">Añadir a la lista</span>
+                            <span className="yellow-button" onClick={deleteProduct}>Borrar</span>
                         </div>
                         <div id='product-info'>
                             <h3 className="name-product">{name}</h3>
@@ -96,6 +132,12 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
                     </div> 
                 </form>
                 </>
+            :
+
+                <Loading>{delProduct}</Loading>
+            }
+                
+        </>
     )
 }
 

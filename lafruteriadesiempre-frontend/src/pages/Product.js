@@ -29,7 +29,7 @@ const Product = ({allProducts, setAllProducts, quantity, setQuantity})=>{
         {!error ? 
             <>
             <Link to={'/productos-de-hoy'} id='back-arrow'>
-                <img src="../img/atras.png" alt="img"/>
+                <img src="../img/atras.png" alt="flecha atras"/>
             </Link>
         
             {token ? 

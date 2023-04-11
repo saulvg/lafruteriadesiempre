@@ -14,7 +14,7 @@ const List = ({allProducts, setAllProducts, quantity, setQuantity}) => {
         {!modal ? 
             <span id="list" onClick={()=>setModal(!modal)}>
                 
-                <img src="../img/lista-de-la-compra.png" alt="img"/> 
+                <img src="../img/lista-de-la-compra.png" alt="icono de lista de la compra"/> 
                 <div id="quantity">{quantity}</div>
             </span> 
         :

@@ -9,7 +9,6 @@ const Header = () =>{
     const navigate = useNavigate()
 
     const signOut = () => {
-        console.log('click');
         setToken('');
         navigate('/')
     }

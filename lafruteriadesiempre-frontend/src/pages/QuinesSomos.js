@@ -10,33 +10,41 @@ const QuienesSomos = () =>{
                 <div className="fruit-store">
                     <figure>
                         <figcaption>Fruteria Barrionuevo</figcaption>
-                        <img src="/img/fBarrionuevo.png" alt="img"/>
+                        <img src="/img/fBarrionuevo.png" alt="img fruteria Barrionuevo huesca"/>
                     </figure>
 
                     <div className='telf-ubi'>
-                    <figure >
-                            <img src="/img/mapa.png" alt="img"/>
-                            <figcaption>C. Mesnaderos, 1, 22003 Huesca</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/telefono.png" alt="img"/>
-                            <figcaption>974 xxx xxx</figcaption>
-                        </figure>  
+                        <a href="https://goo.gl/maps/Pfv81Xwgr6L9yrem7" target="_blank" rel="nofollow">
+                            <figure >
+                                <img src="/img/mapa.png" alt="icon ubicacion fruteria Barrionuevo"/>
+                                <figcaption>C. Mesnaderos, 1, 22003 Huesca</figcaption>
+                            </figure>
+                        </a>
+                        <a href='tel:+34974224712' target='_blank' rel='nofollow'>
+                            <figure>
+                                <img src="/img/telefono.png" alt="icon telefono fruteria Barrionuevo"/>
+                                <figcaption>974 22 47 12</figcaption>
+                            </figure>  
+                        </a>
                     </div>
                 
                     <figure>
                         <figcaption>Fruteria Marcelo</figcaption>
-                        <img src="/img/fMarcelo.jpg" alt="img"/>
+                        <img src="/img/fMarcelo.jpg" alt="img fruteria Marcelo huesca"/>
                     </figure>
                     <div className='telf-ubi'>
-                        <figure >
-                            <img src="/img/mapa.png" alt="img"/>
-                            <figcaption>Av. de Martínez de Velasco, 28, 22004 Huesca</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="/img/telefono.png" alt="img"/>
-                            <figcaption>974 xxx xxx</figcaption>
-                        </figure>
+                        <a href="https://goo.gl/maps/HKAHZc9h4UBXhKYu5" target="_blank" rel="nofollow">
+                            <figure >
+                                <img src="/img/mapa.png" alt="icon ubicacion fruteria Marcelo"/>
+                                <figcaption>Av. de Martínez de Velasco, 28, 22004 Huesca</figcaption>
+                            </figure>
+                        </a>
+                        <a href='tel:+34974214025' target='_blank' rel='nofollow'>
+                            <figure>
+                                <img src="/img/telefono.png" alt="icon telefono fruteria Marcelo"/>
+                                <figcaption>974 21 40 25</figcaption>
+                            </figure>
+                        </a>
                     </div>
                 </div>
                 <p>
@@ -53,10 +61,10 @@ const QuienesSomos = () =>{
                     <div>
                         <div>
                             <p>
-                                Barrio Nuevo: L - V {'->'}   8:30 / 14:00  y  16:30 / 19:30<br/><span className='desktop'>Tlf: 974 xxx xxx </span>
+                                Barrio Nuevo: L - V {'->'}   8:30 / 14:00  y  16:30 / 19:30<br/><a href='tel:+34974224712' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 22 47 12 </span></a>
                             </p>
                             <p>
-                                Marcelo: L - V {'->'}  8:30 / 14:00  y  17:00 / 20:00<br/><span className='desktop'>Tlf: 974 xxx xxx</span> 
+                                Marcelo: L - V {'->'}  8:30 / 14:00  y  17:00 / 20:00<br/><a href='tel:+34974214025' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 21 40 25</span></a>
                             </p>
                         </div>
                         <p>

@@ -252,12 +252,13 @@
 #################*/
 #haz-tu-pedido {
     padding: 8rem 1rem;
-    /* display: grid;
-    grid-template-areas: none; */
     display: flex;
     flex-direction: column;
+}
 
-
+#haz-tu-pedido a {
+    color: black;
+    text-decoration: none;
 }
 
 #haz-tu-pedido h2 {
@@ -280,6 +281,13 @@
 #haz-tu-pedido .haz-tu-pedido-telefono {
     width: 270px;
     height: 133px;
+    transition: .3s;
+}
+
+#haz-tu-pedido .haz-tu-pedido-telefono:hover {
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 #haz-tu-pedido .haz-tu-pedido-telefono figure {
@@ -413,6 +421,11 @@
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
+}
+
+#quienes-somos a {
+    color: black;
+    text-decoration: none;
 }
 
 #content-quienes-somos {
