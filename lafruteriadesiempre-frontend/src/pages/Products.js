@@ -21,14 +21,18 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
    
     return(
         <>
+            {token ? 
+                <Link to={'/nuevo-producto'} id='back-plus'>
+                    <img src="../img/anadir.png" alt="icon anadir porducto"/>
+                </Link>
+            : 
+                null
+            }
             {!error ? 
                 <ul id='products-list' className='standard-page'>
                     
                 {token ? 
                     <>  
-                    <Link to={'/nuevo-producto'} id='back-plus'>
-                        <img src="../img/anadir.png" alt="icon anadir porducto"/>
-                    </Link>
                         {products.map((product)=>{
 
                             return(

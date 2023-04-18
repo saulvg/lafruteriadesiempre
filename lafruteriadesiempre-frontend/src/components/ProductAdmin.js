@@ -12,6 +12,8 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
         e.preventDefault();
         setUpdate('')
         const save = async () => {
+            const redirect = () => navigate('/productos-de-hoy')
+
             try {
                 const res = await fetch(`${process.env.REACT_APP_BACKEND}/products/edit-product/${idProduct}`, {
                     method:'PUT',
@@ -29,7 +31,8 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
                 const body = await res.json()
                 
                 if (res.ok){
-                    setDelProduct(body.message)
+                    setDelProduct(body.message);
+                    setTimeout(redirect, 3000);
                 }else{
                     setError(body.message)
                 }
@@ -43,7 +46,9 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
 
     const deleteProduct = async () => {
 
-        const redirect = () => navigate('/productos-de-hoy')
+        let sure = window.confirm('Seguro que deseas borrar este producto, esto sera defiitivo.');
+        if(sure){
+            const redirect = () => navigate('/productos-de-hoy');
 
             try {
                 const res = await fetch(`${process.env.REACT_APP_BACKEND}/products/delete-product/${idProduct}`,{
@@ -63,8 +68,7 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
             } catch (error) {
                 console.error(error);
             }
-        
-        
+        }
     }
 
     return(
@@ -103,6 +107,7 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
                             type={'text'}
                             cols={'40'}
                             rows={'4'} 
+                            maxLength={'255'}
                             value={description}
                             onChange={(e)=>setDescription(e.target.value)}
                         />

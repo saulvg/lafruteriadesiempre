@@ -30,7 +30,7 @@ const LoginPage = () =>{
                 setToken(body.data.token);
                 setTimeout(()=>{
                     navigate('/')
-                }, 5000)
+                }, 3000)
             }else{
                 setError(body.message);
             }

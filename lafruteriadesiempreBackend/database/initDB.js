@@ -13,8 +13,9 @@ async function initDB(){
     try {
         connection = await getDB();
         await connection.query('DROP TABLE IF EXISTS user');
+        console.log('user table drop');
         await connection.query('DROP TABLE IF EXISTS products');
-
+        console.log('products table drop');
 
         await connection.query(`
             CREATE TABLE user (
