@@ -5,11 +5,11 @@ const QuienesSomos = () =>{
     return(
         <section id='quienes-somos' className='standard-page'>
             <div id="content-quienes-somos">
-                <p>Tu “fruteria de siempre” esta formada por dos pequeñas fruterias de Huesca.</p>
+                <p>Tu “fruteria de siempre” esta formada por dos pequeñas <strong>fruterias de Huesca</strong>.</p>
                 <hr className='separator movile'/>
                 <div className="fruit-store">
                     <figure>
-                        <figcaption>Fruteria Barrionuevo</figcaption>
+                        <figcaption><strong>Fruteria Barrionuevo</strong></figcaption>
                         <img src="/img/fBarrionuevo.png" alt="img fruteria Barrionuevo huesca"/>
                     </figure>
 
@@ -29,7 +29,7 @@ const QuienesSomos = () =>{
                     </div>
                 
                     <figure>
-                        <figcaption>Fruteria Marcelo</figcaption>
+                        <figcaption><strong>Fruteria Marcelo</strong></figcaption>
                         <img src="/img/fMarcelo.jpg" alt="img fruteria Marcelo huesca"/>
                     </figure>
                     <div className='telf-ubi'>
@@ -48,7 +48,7 @@ const QuienesSomos = () =>{
                     </div>
                 </div>
                 <p>
-                    Que desde el año 1998 se esfuerzan en tener el mejor y mas fresco producto posible para que sus clientes puedan disfrutar del sabor y la experiencia de comer frutas, verduras y hortalizas. 
+                    Que desde el año 1990 se esfuerzan en tener el mejor y mas fresco producto posible para que sus clientes puedan disfrutar del sabor y la experiencia de comer frutas, verduras y hortalizas. 
                 </p>
                 <hr className='separator desktop'/>
                 <Maps id='map'/>
@@ -61,7 +61,7 @@ const QuienesSomos = () =>{
                     <div>
                         <div>
                             <p>
-                                Barrio Nuevo: L - V {'->'}   8:30 / 14:00  y  16:30 / 19:30<br/><a href='tel:+34974224712' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 22 47 12 </span></a>
+                                Barrio Nuevo: L - V {'->'}   8:30 / 14:00  y  17:00 / 19:30<br/><a href='tel:+34974224712' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 22 47 12 </span></a>
                             </p>
                             <p>
                                 Marcelo: L - V {'->'}  8:30 / 14:00  y  17:00 / 20:00<br/><a href='tel:+34974214025' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 21 40 25</span></a>
