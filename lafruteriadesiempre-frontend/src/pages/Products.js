@@ -18,7 +18,6 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
             setQuantity(quantity+1)
         }
     }
-   
     return(
         <>
             {token ? 

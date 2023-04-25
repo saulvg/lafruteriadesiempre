@@ -15,7 +15,7 @@ const useGetProducts = (setError, toogleShoww) => {
                     setProducts(body.data)
                     /* console.log('body data',body.data); */
                 }else{
-                    setError(body.message)
+                    setError(body.message);
                 }
             } catch (error) {
                 console.error(error);
