@@ -1,4 +1,7 @@
-import './stylesPage.css'
+import './stylesPage.css';
+
+import LazyLoad from 'react-lazyload';
+
 import { useContext, useState } from "react";
 import useGetProducts from "../hooks/useGetProducts";
 import {Error} from "../components"
@@ -35,9 +38,11 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
                         {products.map((product)=>{
 
                             return(
-                                
                                 <li key={product.id} className={`showw${product.showw}`}>
-                                    <img className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img'/>
+                                    <LazyLoad height={'258'}>
+                                        <img className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img' />
+                                    </LazyLoad>
+                                {/*  <LazyLoadImage className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='imgCatalogoFruta' effect='opacity'/> */}
                                     <h3 className="name-product">{product.name}</h3>
                                     <div>
                                         <Link className='yellow-button' to={`/producto/${product.id}`}>Saber mas</Link>
