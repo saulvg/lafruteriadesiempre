@@ -7,7 +7,7 @@ const AvisoLegal = () =>{
                 <section>
                     <h4>Titular del servicio</h4>
                     <p>
-                        La dirección de nuestra web es: https://www.tufruteriadesiempre.com y el titular y propietario del Servicio es fruteria Marcelo y fruteria Barrionuevo
+                        La dirección de nuestra web es: https://www.tufruteriadesiempre.com y el titular y propietario del Servicio es frutería Marcelo y frutería Barrionuevo
                         (en adelante, "tuFruteriaDeSiempre"), con domicilio en Av. de Martínez de Velasco, 28, 22004 Huesca y C. Mesnaderos, 1, 22003 Huesca.
                         Contacto: marfruitis@hotmail.com
                         Todos los derechos reservados.
@@ -21,7 +21,7 @@ const AvisoLegal = () =>{
                         costumbres generalmente aceptadas y el orden público.
                         Este sitio Web le es ofrecido a condición de que usted acepte íntegramente los términos,
                         condiciones y comunicaciones contenidos en el presente aviso legal. El hecho de que usted use
-                        este sitio Web constituye por sí sólo la aceptación de los mismos.
+                        este sitio Web constituye por sí solo la aceptación de los mismos.
                     </p>
                 </section>
                 <section>
@@ -77,7 +77,7 @@ const AvisoLegal = () =>{
                     </p>
                 </section>
                 <section>
-                    <h4>actualizaciones de la pagina web</h4>
+                    <h4>Actualizaciones de la página web</h4>
                     <p>
                         tuFruteriaDeSiempre se reserva el derecho a actualizar, modificar o eliminar la información de esta
                         página web y su configuración sin preaviso. De igual forma podrá suspender su difusión total o

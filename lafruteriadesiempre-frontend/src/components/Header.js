@@ -15,7 +15,7 @@ const Header = () =>{
 
     return(
         <header>
-            <h1 className='bye'>Fruteria huesca, Fruteria Marcelo, Fruteria Barrionuevo</h1>
+            <h1 className='bye'>Frutería Huesca, Frutería Marcelo, Frutería Barrionuevo</h1>
             <div>
                 <hr className='black-line'/>
                 <Link id='link-logo' to='/' style={{backgroundImage:`url(/img/logo.png)`}}></Link>

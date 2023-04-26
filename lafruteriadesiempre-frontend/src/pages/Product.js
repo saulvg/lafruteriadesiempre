@@ -39,7 +39,7 @@ const Product = ({allProducts, setAllProducts, quantity, setQuantity})=>{
                 <section id='individual-product' className='standard-page'>
                     <figure>
                         <div id='product-content'>
-                            <img className="img-product" src={`${process.env.REACT_APP_BACKEND}/uploads/${photo}`} alt='img'/>
+                            <img className="img-product" src={`${process.env.REACT_APP_BACKEND}/uploads/${photo}`} alt='img-fruta'/>
                             <span className="yellow-button" onClick={()=>onAddProduct({id:idProduct, name:name, photo:photo})}>Añadir a la lista</span>
                         </div>
                         <div id='product-info'>

@@ -36,7 +36,7 @@ const List = ({allProducts, setAllProducts, quantity, setQuantity}) => {
                             {allProducts.map((product)=>{
                             return(
                                 <li key={product.id} className={'list'}>
-                                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img'/>
+                                    <img src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='min-fruta-huesca'/>
                                     <div>
                                         <h3 >{product.name}</h3>
                                         <span className='yellow-button' onClick={()=>deleteProductList(product.id)}>Eliminar</span>

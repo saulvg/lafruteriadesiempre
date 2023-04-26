@@ -44,7 +44,7 @@ const LoginPage = () =>{
             {
                 !token ? (
                     <div>
-                    <h3>Inicio sesion</h3>
+                    <h3>Inicio sesión</h3>
                         <form onSubmit={login} id={'login-form'}>
                             <label>Email:
                                 <input

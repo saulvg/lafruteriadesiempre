@@ -2,7 +2,7 @@ const PoliticasPrivacidad = () =>{
     return(
         <section className='standard-page aviso-politicas'>
             <div>
-                <h3>PoliticasPrivacidad</h3>
+                <h3>Políticas de privacidad</h3>
                 <p>
                     En cumplimiento de lo establecido en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a 
                     la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se
@@ -12,7 +12,7 @@ const PoliticasPrivacidad = () =>{
                 <section>
                     <h4>Responsable del tratamiento de datos personales</h4>
                     <p>
-                        Fruteria Marcelo y fruteria Barrionuevo., con N.I.F. número "anotar", domicilio en Av. de Martínez de Velasco, 28, 22004 Huesca y
+                        Frutería Marcelo y frutería Barrionuevo., con N.I.F. número "anotar", domicilio en Av. de Martínez de Velasco, 28, 22004 Huesca y
                         C. Mesnaderos, 1, 22003 Huesca respectivamente teléfono 974 214025 y 974 224712 respectivamente y email marfruitis@hotmail.com, 
                         es el responsable del tratamiento de los datos de carácter personal. 
                     </p>
@@ -20,14 +20,14 @@ const PoliticasPrivacidad = () =>{
                 <section>
                     <h4>Finalidad del tratamiento de datos personales</h4>
                     <ul>
-                        <li>Resolucion de consultas a traves del correo electrónico.</li>
-                        <li>Recepcion de pedidos a través de la aplicación WhatsApp o llamada telefonica.</li>
+                        <li>Resolución de consultas a través del correo electrónico.</li>
+                        <li>Recepción de pedidos a través de la aplicación WhatsApp o llamada telefónica.</li>
                     </ul>
                 </section>
                 <section>
                     <h4>Envío de información comercial</h4>
                     <p>
-                        Tus datos no seran tratados con fines comerciales, por lo que sus datos no serán utilizados para remitirle información comercial. 
+                        Tus datos no serán tratados con fines comerciales, por lo que sus datos no serán utilizados para remitirle información comercial. 
                     </p>
                 </section>
                 <section>
@@ -65,7 +65,7 @@ const PoliticasPrivacidad = () =>{
                 <section>
                     <h4>Ejercicio de derechos</h4>
                     <p>
-                        Cualquier persona tiene derecho a obtener confirmación sobre si en fruteria Barrionuevo o fruteria Marcelo, se están tratando sus datos personales.
+                        Cualquier persona tiene derecho a obtener confirmación sobre si en frutería Barrionuevo o frutería Marcelo, se están tratando sus datos personales.
                         Las personas interesadas tienen derecho a:
                     </p>
                     <ul>
@@ -85,14 +85,14 @@ const PoliticasPrivacidad = () =>{
                         También podrán solicitar la portabilidad de sus datos.
                         Los interesados también tendrán derecho a la tutela judicial efectiva y a presentar una reclamación ante la autoridad de control, en este caso, 
                         la Agencia Española de Protección de Datos, si consideran que el tratamiento de datos personales que le conciernen infringe el Reglamento.
-                        Para el ejercicio de estos derechos, los titulares pueden dirigirse a fruteria Marcelo o fruteria Barrionuevo, 
+                        Para el ejercicio de estos derechos, los titulares pueden dirigirse a frutería Marcelo o frutería Barrionuevo, 
                         con domicilio en Av. de Martínez de Velasco, 28, 22004 Huesca o C. Mesnaderos, 1, 22003 Huesca, teléfono 974 214025 y email marfruitis@hotmail.com
                     </p>
                 </section>
                 <section>
                     <h4>Origen u obtención de datos de carácter personal</h4>
                     <p>
-                        Los datos personales que trata tuFruteriaDeSiempre. proceden del propio interesado o los proporciona el mismo.
+                        Los datos personales que trata tuFruteriaDeSiempre. Proceden del propio interesado o los proporciona el mismo.
                         Las categorías de datos personales que se tratan son:
                     </p>
                     <ul>

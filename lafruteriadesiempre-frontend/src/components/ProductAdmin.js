@@ -102,7 +102,7 @@ const ProductAdmin = ({token, idProduct, name, setName, pricekg, setPricekg, des
                         />
                     </label>
                     <label>
-                        <span>Descripcion:</span>
+                        <span>Descripción:</span>
                         <textarea 
                             type={'text'}
                             cols={'40'}

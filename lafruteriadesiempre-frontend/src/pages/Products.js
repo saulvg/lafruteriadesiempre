@@ -40,9 +40,8 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
                             return(
                                 <li key={product.id} className={`showw${product.showw}`}>
                                     <LazyLoad height={'258'}>
-                                        <img className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img' />
+                                        <img className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img-fruta-huesca' />
                                     </LazyLoad>
-                                {/*  <LazyLoadImage className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='imgCatalogoFruta' effect='opacity'/> */}
                                     <h3 className="name-product">{product.name}</h3>
                                     <div>
                                         <Link className='yellow-button' to={`/producto/${product.id}`}>Saber mas</Link>
@@ -57,7 +56,7 @@ const Products = ({allProducts, setAllProducts, quantity, setQuantity})=> {
                         {productShoww.map((product)=>{
                             return(
                                 <li key={product.id}>
-                                    <img className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img'/>
+                                    <img className='img-product' src={`${process.env.REACT_APP_BACKEND}/uploads/${product.photo}`} alt='img-fruta-huesca'/>
                                     <h3 className="name-product">{product.name}</h3>
                                     <div>
                                         <Link className='yellow-button' to={`/producto/${product.id}`}>Saber mas</Link>

@@ -6,7 +6,7 @@ const Footer = () => {
         <footer id="footer">
             <div>
                 <p>
-                    <Link to={'/politicas-de-privacidad'} target='_blank'>Politicas de privacidad</Link>
+                    <Link to={'/politicas-de-privacidad'} target='_blank'>Políticas de privacidad</Link>
                 </p>
                 <p>
                     <Link to={'aviso-legal'} target='_blank'>Aviso legal</Link>

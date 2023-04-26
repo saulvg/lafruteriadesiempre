@@ -5,11 +5,11 @@ const QuienesSomos = () =>{
     return(
         <section id='quienes-somos' className='standard-page'>
             <div id="content-quienes-somos">
-                <p>Tu “fruteria de siempre” esta formada por dos pequeñas <strong>fruterias de Huesca</strong>.</p>
+                <p>Tu "frutería de siempre” esta formada por dos pequeñas <strong>fruterías de Huesca</strong>.</p>
                 <hr className='separator movile'/>
                 <div className="fruit-store">
                     <figure>
-                        <figcaption><strong>Fruteria Barrionuevo</strong></figcaption>
+                        <figcaption><strong>Frutería Barrionuevo</strong></figcaption>
                         <img src="/img/fBarrionuevo.png" alt="img fruteria Barrionuevo huesca"/>
                     </figure>
 
@@ -29,7 +29,7 @@ const QuienesSomos = () =>{
                     </div>
                 
                     <figure>
-                        <figcaption><strong>Fruteria Marcelo</strong></figcaption>
+                        <figcaption><strong>Frutería Marcelo</strong></figcaption>
                         <img src="/img/fMarcelo.jpg" alt="img fruteria Marcelo huesca"/>
                     </figure>
                     <div className='telf-ubi'>
@@ -48,27 +48,27 @@ const QuienesSomos = () =>{
                     </div>
                 </div>
                 <p>
-                    Que desde el año 1990 se esfuerzan en tener el mejor y mas fresco producto posible para que sus clientes puedan disfrutar del sabor y la experiencia de comer frutas, verduras y hortalizas. 
+                    Que desde el año 1990 se esfuerzan en tener el mejor y más fresco producto posible para que sus clientes puedan disfrutar del sabor y la experiencia de comer frutas, verduras y hortalizas. 
                 </p>
                 <hr className='separator desktop'/>
                 <Maps id='map'/>
                 <hr className='separator'/>
                 <p className='special-p'>
-                    Queremos seguir formando parte de vuestra alimentacion<br/> y por eso estamos aqui.
+                    Queremos seguir formando parte de vuestra alimentacion<br/> y por eso estamos aquí.
                 </p>
                 <div id="timetable">
-                    <p>Horario y Telefono</p>
+                    <p>Horario y Teléfono</p>
                     <div>
                         <div>
                             <p>
-                                Barrio Nuevo: L - V {'->'}   8:30 / 14:00  y  17:00 / 19:30<br/><a href='tel:+34974224712' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 22 47 12 </span></a>
+                                Barrionuevo: L - V {'->'}   8:30 / 14:00  y  17:00 / 19:30<br/><a href='tel:+34974224712' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 22 47 12 </span></a>
                             </p>
                             <p>
                                 Marcelo: L - V {'->'}  8:30 / 14:00  y  17:00 / 20:00<br/><a href='tel:+34974214025' target='_blank' rel='nofollow'><span className='desktop'>Tlf: 974 21 40 25</span></a>
                             </p>
                         </div>
                         <p>
-                            Sabados {'->'} 9:00 / 13:30
+                            Sábados {'->'} 9:00 / 13:30
                         </p>
                     </div>
                 </div>

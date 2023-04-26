@@ -81,7 +81,7 @@ const NewProduct = () => {
                             />
                         </label>
                         <label>
-                            <span>Descripcion:</span>
+                            <span>Descripción:</span>
                             <textarea 
                                 type={'text'}
                                 cols={'40'}

@@ -7,7 +7,7 @@ const HazTuPedido = () => {
                     <a href="tel:+34974214025" target="_blank" rel="nofollow">
                         <figure>
                             <img className="icon-haz-pedido telefono" src="/img/telefono.png" alt="icono telefono de fruteria Marcelo"/>
-                            <figcaption>Av. de Martinez de Velasco<br/>974 21 40 25</figcaption>
+                            <figcaption>Av. de Martínez de Velasco<br/>974 21 40 25</figcaption>
                         </figure>
                     </a>
                 </div>
@@ -31,7 +31,7 @@ const HazTuPedido = () => {
                 <div className='haz-tu-pedido-columns'>
                     <figure className="haz-pedido-background">
                         <img className="icon-haz-pedido shop" src="/img/shop.png" alt="img de tienda"/>
-                        <figcaption>Recogelo en tienda</figcaption>
+                        <figcaption>Recógelo en tienda</figcaption>
                     </figure>
                     <div className="extra-info">
                         <a href="https://goo.gl/maps/HKAHZc9h4UBXhKYu5" target="_blank" rel="nofollow">
