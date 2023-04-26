@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-//import AOS from 'aos';
-/* import 'aos/dist/aos.css'; */
+
 /**
  * ###########
  * ## React ##
  * ###########
  */
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import React, { useState, useContext, useEffect } from 'react';
+import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
+import React, { useState, useContext, useEffect, Component } from 'react';
 
 
 /**
@@ -62,13 +60,20 @@ const AuthProvider = (props) => {
 };
 
 
+//Componente para que siempre carge arriba la web
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
 
- /*  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
- */
+ 
   const [allProducts, setAllProducts] = useState([]);
   const [quantity, setQuantity] = useState(0);
   //const {token} = useContext(AuthContext);
@@ -77,6 +82,7 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+      <ScrollToTop/>
         <Header/>
         <Routes>
           <Route path='/login' element={<LoginPage/>}/>
