@@ -28,7 +28,6 @@ const isAuth = async (req, res, next) => {
             `SELECT email FROM user WHERE id = ?`,
             [tokenInfo.id]
         );
-
         if(user[0]?.email !== process.env.ADMIN_MAIL){
             const error = new Error('Token is not valid');
             error.httpStatus = 401;
